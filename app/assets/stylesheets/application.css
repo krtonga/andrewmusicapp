@@ -18,3 +18,16 @@
  *= require_self
  */
 
+body {
+  background-color: pink;
+
+}
+
+.largest {
+  background-color: white;
+}
+
+.index {
+  background-color: palegoldenrod;
+  padding: 30px;
+}

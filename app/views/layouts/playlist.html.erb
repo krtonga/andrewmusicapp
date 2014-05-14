@@ -1,0 +1,13 @@
+
+<playlist>
+<div class="playlist five columns ">
+  <h2>This is your current playlist</h2>
+  <% @songs.each do |song| %>
+    <ul>
+      <li>
+        <%= song.title%>
+      </li>
+    </ul>
+  <% end %>
+</div>
+</playlist>

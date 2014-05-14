@@ -1,17 +1,17 @@
-<% @songs.each do |song| %>
 
-  <div class="twelve columns">
-    <div class="seven columns">
-      <h2> <%= song[:title]%> </h2>
+  <% @songs.each do |song| %>
+
+    <div class="twelve columns">
+      <div class="index seven columns">
+        <h2> <%= song[:title]%> </h2>
+      </div>
+      <img src="<%= song[:artwork_url]%>" alt="">
+
+    <form action="/songs/save" method="post">
+      <%= token_tag %>
+      <input type="hidden" name="track_id" value="<%= song[:itunes_song_id] %>">
+      <button type="submit">Save</button>
+    </form>
     </div>
-    <img src="<%= song[:artwork_url]%>" alt="">
+  <% end %>
 
-  <form action="/songs/save" method="post">
-    <%= token_tag %>
-    <input type="hidden" name="track_id" value="<%= song[:itunes_song_id] %>">
-    <button type="submit">Save</button>
-  </form>
-
-  </div>
-
-<% end %>
